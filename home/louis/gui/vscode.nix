@@ -1,6 +1,6 @@
 {
-  config,
   pkgs,
+  config,
   ...
 }: {
   programs.vscode = {
@@ -58,10 +58,14 @@
         autofetch = true;
         confirmSync = false;
       };
-      workbench = {
-        colorTheme = "Solarized Light";
-        iconTheme = "ayu";
+
+      workbench.colorCustomizations = {
+        editor = {
+          background = "#${config.colorScheme.colors.base00}";
+          foreground = "#${config.colorScheme.colors.base05}";
+        };
       };
+
       nix = {
         enableLanguageServer = true;
         serverPath = "${pkgs.nil}/bin/nil";
