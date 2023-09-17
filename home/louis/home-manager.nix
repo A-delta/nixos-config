@@ -1,4 +1,14 @@
-{config, ...}: {
+{
+  config,
+  nix-colors,
+  ...
+}: {
+  imports = [
+    nix-colors.homeManagerModules.default
+  ];
+
+  colorScheme = nix-colors.colorSchemes.gruvbox-light-medium;
+
   home = {
     username = "louis";
     homeDirectory = "/home/louis";
