@@ -7,7 +7,7 @@
     nix-colors.homeManagerModules.default
   ];
 
-  colorScheme = nix-colors.colorSchemes.gruvbox-light-medium;
+  colorScheme = nix-colors.colorSchemes.da-one-paper;
 
   home = {
     username = "louis";
